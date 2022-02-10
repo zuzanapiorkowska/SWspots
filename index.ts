@@ -1,12 +1,10 @@
 ///<reference types="@types/google.maps"/>
 
-import { User } from "./User";
-import { Company } from "./Company";
 import { CustomMap } from "./CustomMap";
+import { SWSpot } from "./SWSpot";
 
 const customMap = new CustomMap("root");
-const user = new User();
-const company = new Company();
-
-customMap.addMarker(user);
-customMap.addMarker(company)
+// const osLesne = ["tytuł", {lat: 15, lng: 25 }, "fef", {bar: "ed", wideBar: "d", highBar: "d", parallelBars:"D", ladder:"d", horizontalLadder: "l", pipe:"d"}, "s"]
+const swSpot = new SWSpot("tytuł", {lat: 15, lng: 25 }, "fef", {bar: "ed", wideBar: "d", highBar: "d", parallelBars:"D", ladder:"d", horizontalLadder: "l", pipe:"d"}, "s");
+console.log(swSpot.location.lat);
+customMap.addMarker(swSpot);
