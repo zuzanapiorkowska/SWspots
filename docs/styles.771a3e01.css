@@ -244,6 +244,14 @@ color:#E07A5F;
 }
 
 @media only screen and (max-width: 700px) {
+
+    body {
+        padding: 1rem;
+    }
+
+    header {
+        padding: 0.5rem;
+    }
     #heading {
         font-size: 1.7rem;
         padding-right: 0;
@@ -257,24 +265,33 @@ color:#E07A5F;
     }
 
     tr {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     .text {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .spot-name {
+        font-size:1.8rem;
+    }
+
+    h3.subtitle{
+        font-size: 0.7rem !important;
     }
 
     td.availability {
         width: 1rem;
     }
 
-    .spot-name {
-        font-size: 0.8rem;
+    h1.spot-name {
+        font-size: 1.2rem;
     }
 
     #root {
     height: 50rem;
     width: auto;
+    border: 5px solid rgba(129, 178, 154, 0.85);
     }
 
     #query {
@@ -285,6 +302,9 @@ color:#E07A5F;
         margin-right: 0;
         padding: 1rem
     }
+    input {
+        margin-top: 0.5rem;
+    }
     }
 
-/*# sourceMappingURL=styles.cadc914f.css.map */
+/*# sourceMappingURL=styles.771a3e01.css.map */
