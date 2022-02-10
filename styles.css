@@ -103,10 +103,19 @@ input:focus{
     outline: none;
     background-color: #d7fbe9;
 }
+table { 
+    border-collapse: collapse; 
+}
 
 tr {
     font-size: 1rem;
     height: 10px;
+    border-bottom: 1px solid rgba(51, 55, 85, 0.6);
+}
+
+
+.last{
+    border-bottom: none;
 }
 
 td.equipment{

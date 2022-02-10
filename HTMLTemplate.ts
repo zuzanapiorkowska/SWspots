@@ -45,7 +45,7 @@ export function createSpotInfo(spot: SWSpot):string {
                                 <td class="equipment">pionowa rurka</td>
                                 <td class="availability ${spot.equipment.pipe}">${spot.equipment.pipe}</td>
                             </tr>
-                            <tr>
+                            <tr class="last">
                                 <td class="equipment">koła gimnastyczne</td>
                                 <td class="availability ${spot.equipment.rings}">${spot.equipment.rings}</td>
                             </tr>
