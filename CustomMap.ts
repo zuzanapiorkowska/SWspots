@@ -8,12 +8,12 @@ export interface ObjectToMark {
 export class CustomMap {
     private googleMap: google.maps.Map;
 
-    constructor(divId: string) {
+    constructor(divId: string, objectToMark: ObjectToMark) {
         this.googleMap = new google.maps.Map(document.getElementById(divId), {
-            zoom: 1,
+            zoom: 13,
             center: {
-                lat: 0,
-                lng: 0
+                lat: objectToMark.location.lat,
+                lng: objectToMark.location.lng
             }
         });
     }
@@ -22,7 +22,7 @@ export class CustomMap {
             map: this.googleMap,
             position: {
                 lat: objectToMark.location.lat,
-                lng: objectToMark.location.lng
+                lng: objectToMark.location.lng,
             }, 
         });
 

@@ -1,3 +1,5 @@
+import { ObjectToMark } from "./CustomMap";
+
 export class Location {
     constructor(
         public lat: number,
@@ -16,7 +18,7 @@ export class Equipment {
         public pipe: string
     ) { }
 }
-export class SWSpot {
+export class SWSpot implements ObjectToMark{
     constructor(
         public placeName: string,
         public location: Location,
@@ -26,6 +28,6 @@ export class SWSpot {
         public imgSrc: string
     ) { }
     markerContent(): string {
-        return `<h1>${this.placeName}</h1>`;
+        return `<h1 class="label">${this.placeName}</h1>`;
     }
 }
