@@ -11,14 +11,17 @@ body {
     background-image: url("https://transparenttextures.com/patterns/asfalt-dark.png");
     padding: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-y: hidden;
 }
 
 #left-side {
     height: 100%;
     width: 100%;
     margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
+    align-self: stretch;
 }
 
 #root {
@@ -49,13 +52,18 @@ img#logo {
 
 img.photo {
     height: 12rem;
-    width: 100%;
     padding: 0;
-    margin: 0.5rem 1.5rem 0.5rem 0;
+    margin: 0.5rem 0rem 0.5rem 0;
     border-radius: 0.5rem;
-    border: 5px solid rgba(129, 178, 154, 0.85);;
+    border: 5px solid rgba(129, 178, 154, 0.85);
     object-fit: cover;
-    justify-self: center;
+    width: 100%;
+}
+
+.photo-container {
+    width: 20rem;
+    display: flex;
+    align-items: stretch;
 }
 
 #heading {
@@ -110,10 +118,11 @@ td.equipment{
 
 td.availability {
     text-align: right;
-    width: 2rem;
+    width: 3rem;
     font-weight: bold;
     font-size: 1rem;
     text-shadow: 1px 1px 1px rgb(104, 104, 104);
+    padding-right: 0.2rem;
 }
 
 .x {
@@ -127,8 +136,8 @@ td.availability {
 
 .info-box {
     background-color: rgba(244, 241, 222, 0.3);
-    margin: 1rem 1.5rem 1rem 0;
-    padding: 0.5rem 1rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 1rem 1rem;
     border: none;
     border-radius: 0.5rem;
     display: flex;
@@ -145,12 +154,12 @@ td.availability {
     text-shadow: 1px 1px 1px rgb(99, 99, 99);
     font-size: 1.2rem;
     margin: 0;
-    margin-top: 0.1rem;
     margin-left: 0.3rem;
     padding: 0;
 }
 
 .subtitle {
+    display: inline-block;
     font-size: 0.9rem;
     color: #F4F1DE;
     text-shadow: 1px 1px 1px rgb(149, 149, 149);
@@ -159,10 +168,13 @@ td.availability {
 }
 
 .text {
+    display: inline-block;
     font-weight: bold;
     color: #333755;
     font-size: 0.8rem;
-    margin-left: 1.5rem;
+    text-align: right;
+    align-self: center;
+    padding-right: 0.3rem;
 }
 
 .info-part {
@@ -170,10 +182,14 @@ td.availability {
     padding: 0.3rem;
     border: none;
     border-radius: 0.5rem;
-    width: 11.2rem;
     display: flex;
     flex-direction: column;
     align-content: center;
+}
+
+.surface {
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .right-info {
@@ -185,6 +201,27 @@ td.availability {
     color: #e07a5f;
     font-size: 1rem;
 }
+
+#query {
+    overflow-y: auto;
+    margin-right: 0.5rem;
+}
+
+::-webkit-scrollbar {
+    background-color: rgba(242, 204, 143, 0.4);
+    width: 1rem;
+    border-radius: 1rem;
+}
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(242, 204, 143, 0.7);
+    border-radius: 1rem; 
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(242, 204, 143, 2); 
+  }
+
 
 @media only screen and (max-width: 800px) {
 #heading {

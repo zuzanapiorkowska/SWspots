@@ -5,8 +5,9 @@ export function createSpotInfo(spot: SWSpot):string {
 <div class="info-box">
                 <div class="left-info">
                     <h1 class="spot-name">${spot.placeName}</h1>
-                    <img class="photo"
-                        src=${spot.imgSrc}>
+                    <div class="photo-container">
+                    <img class="photo" src=${spot.imgSrc}>
+                    </div>
                 </div>
                 <div class="right-info">
                     <div class="info-part equipment">
@@ -42,8 +43,8 @@ export function createSpotInfo(spot: SWSpot):string {
                             </tr>
                         </table>
                     </div>
-                    <div class="info-part">
-                        <h2 class="subtitle">Nawierzchnia:<span class=text>${spot.surface}</span></h2>
+                    <div class="info-part surface">
+                        <p class="subtitle">Nawierzchnia:</p><span class=text>${spot.surface}</span>
                     </div>
                 </div>
             </div>
