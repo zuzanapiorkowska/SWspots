@@ -28,7 +28,6 @@ body {
 #root {
     height: 100%;
     width: 100%;
-    /* margin: 2rem; */
     border-radius: 1rem;
     border: 10px solid rgba(129, 178, 154, 0.85);
     background-color: lightgray;
@@ -245,7 +244,45 @@ color:#E07A5F;
 }
 
 @media only screen and (max-width: 700px) {
+    #heading {
+        font-size: 1.7rem;
+        padding-right: 0;
+        margin-right: 0;
+    }
+    
     body {
         flex-direction: column;
+        overflow: auto;
+        height:min-content;
+    }
+
+    tr {
+        font-size: 0.8rem;
+    }
+
+    .text {
+        font-size: 0.5rem;
+    }
+
+    td.availability {
+        width: 1rem;
+    }
+
+    .spot-name {
+        font-size: 0.8rem;
+    }
+
+    #root {
+    height: 50rem;
+    width: auto;
+    }
+
+    #query {
+        margin-right: 0;
+    }
+
+    .info-box {
+        margin-right: 0;
+        padding: 1rem
     }
     }
