@@ -7,13 +7,9 @@ import { capitalizeFirstLetter } from "./CapitalizeFirstLetter";
 import { SWSpot } from "./SWSpot";
 
 const mapRoot = document.getElementById("root") as HTMLDivElement;
-const customMap = new CustomMap("root", spots[0], 13);
+const customMap = new CustomMap("root", spots[0], 11);
 const query = document.getElementById("query") as HTMLDivElement;
 const areaInput = document.getElementById("input") as HTMLInputElement;
-const labels = document.querySelectorAll(".label") as NodeList;
-
-// dodać wyszukaj na mapie
-
 areaInput.addEventListener("change", () => {
     query.innerHTML = "";
     spots.forEach((spot) => {

@@ -278,11 +278,9 @@ var spots_1 = require("./spots");
 var CapitalizeFirstLetter_1 = require("./CapitalizeFirstLetter");
 
 var mapRoot = document.getElementById("root");
-var customMap = new CustomMap_1.CustomMap("root", spots_1.spots[0], 13);
+var customMap = new CustomMap_1.CustomMap("root", spots_1.spots[0], 11);
 var query = document.getElementById("query");
 var areaInput = document.getElementById("input");
-var labels = document.querySelectorAll(".label"); // dodać wyszukaj na mapie
-
 areaInput.addEventListener("change", function () {
   query.innerHTML = "";
   spots_1.spots.forEach(function (spot) {
@@ -323,4 +321,4 @@ function showNewMap(spotName) {
 
 exports.showNewMap = showNewMap;
 },{"./CustomMap":"MtoT","./HTMLTemplate":"cXf9","./spots":"FId5","./CapitalizeFirstLetter":"D87I"}]},{},["QCba"], null)
-//# sourceMappingURL=swSpots.96f9929b.js.map
+//# sourceMappingURL=swSpots.bd470b62.js.map
