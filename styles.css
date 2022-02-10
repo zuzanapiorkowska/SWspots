@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Nothing+You+Could+Do&family=Sedgwick+Ave&display=swap');
+*{
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    margin:0;
+    display: flex;
+    background-color: #3D405B;
+    background-image: url("https://transparenttextures.com/patterns/asfalt-dark.png");
+    padding: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#left-side {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+    /* margin: 2rem; */
+    border-radius: 1rem;
+    border: 10px solid rgba(129, 178, 154, 0.85);
+    background-color: lightgray;
+    opacity: 85%;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    margin: -0.3rem;
+    padding: 0;
+}
+
+img#logo {
+    width:6rem;
+}
+
+img.photo {
+    height: 12rem;
+    width: 100%;
+    padding: 0;
+    margin: 0.5rem 1.5rem 0.5rem 0;
+    border-radius: 0.5rem;
+    border: 5px solid rgba(129, 178, 154, 0.85);;
+    object-fit: cover;
+    justify-self: center;
+}
+
+#heading {
+    color: #F4F1DE;
+    font-family: "Sedgwick Ave";
+    font-size: 2.1rem;
+    align-self: center;
+    justify-self: center;
+    padding: 1rem;
+    opacity: 90%;
+}
+
+#input-box {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    padding: 0.6rem 0.7rem;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #F4F1DE;
+    color: #3D405B;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 50%;
+}
+
+input:hover {
+    background-color: #d7fbe9;
+}
+
+input:focus{
+    outline: none;
+    background-color: #d7fbe9;
+}
+
+tr {
+    font-size: 0.8rem;
+    height: 10px;
+}
+
+td.equipment{
+    text-align: left;
+    font-weight: bold;
+    color: #333755;
+    padding: 0.2rem;
+}
+
+td.availability {
+    text-align: right;
+    width: 2rem;
+    color: #E07A5F;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgb(104, 104, 104);
+}
+
+.info-box {
+    background-color: rgba(244, 241, 222, 0.3);
+    margin: 1rem 1.5rem 1rem 0;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+.equipment {
+    margin-bottom: 0.5rem;
+}
+
+.spot-name {
+    color:rgb(242, 204, 143);
+    text-shadow: 1px 1px 1px rgb(99, 99, 99);
+    font-size: 1.2rem;
+    margin: 0;
+    margin-top: 0.1rem;
+    margin-left: 0.3rem;
+    padding: 0;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #F4F1DE;
+    text-shadow: 1px 1px 1px rgb(149, 149, 149);
+    margin: 0;
+    padding: 0.2rem 0.3rem 0.3rem;
+}
+
+.text {
+    font-weight: bold;
+    color: #333755;
+    font-size: 0.8rem;
+    margin-left: 1.5rem;
+}
+
+.info-part {
+    background-color: rgba(244, 241, 222, 0.35);
+    padding: 0.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    width: 11.2rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.right-info {
+    align-self: center;
+    margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+#heading {
+    font-size: 1.5rem;
+}
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        flex-direction: column;
+    }
+    }
