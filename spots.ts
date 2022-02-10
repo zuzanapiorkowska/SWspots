@@ -19,7 +19,7 @@ export const spots: SWSpot[] = [
     ),
     new SWSpot(
         "Park Sowińskiego", 
-        new Location(52.23855969507622, 20.915941942381),
+        new Location(52.22654479169172, 20.93761562289638),
         "Wola",
         "żwir",
         new Equipment("o","o","o","o","o","o","o","x","x"),

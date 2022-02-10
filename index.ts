@@ -12,12 +12,16 @@ const query = document.getElementById("query") as HTMLDivElement;
 const areaInput = document.getElementById("input") as HTMLInputElement;
 areaInput.addEventListener("change", () => {
     query.innerHTML = "";
+    let querySpots: SWSpot[] = [];
     spots.forEach((spot) => {
-        const querySpots: SWSpot[] = []
-        if (spot.area === capitalizeFirstLetter(areaInput.value))
-            querySpots.push(spot)
+        if (spot.area === capitalizeFirstLetter(areaInput.value)){
+        querySpots.push(spot);
+    } })
+    if (querySpots.length!==0) {
+        showAreaMap(querySpots, 13);
         showSpots(querySpots);
-    })
+    }
+    querySpots=[];
     areaInput.value="";
 })
 
@@ -37,14 +41,22 @@ showSpots(spots);
 const spotsNames = document.querySelectorAll(".spot-name") as NodeList;
 spotsNames.forEach((spotName) => {
     spotName.addEventListener("click", () => {
-        showNewMap(spotName);
+        showNewMap(spotName, 18);
     })
 })
 
 
-export function showNewMap(spotName){
+export function showNewMap(spotName, zoom){
     mapRoot.innerHTML = "";
     const clickedSpot = spots.find((spot) => { return spot.placeName === spotName.textContent })
-    const customMap = new CustomMap("root", clickedSpot, 18);
+    const customMap = new CustomMap("root", clickedSpot, zoom);
     customMap.addMarker(clickedSpot);
+}
+
+export function showAreaMap(query: SWSpot[], zoom: number){
+    mapRoot.innerHTML = "";
+    const customMap = new CustomMap("root", query[0], zoom);
+    query.forEach((result)=>{
+        customMap.addMarker(result);
+    })
 }

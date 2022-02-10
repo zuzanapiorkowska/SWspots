@@ -247,7 +247,7 @@ exports.spots = void 0;
 
 var SWSpot_1 = require("./SWSpot");
 
-exports.spots = [new SWSpot_1.SWSpot("Osiedle Leśne", new SWSpot_1.Location(52.254343, 20.933834), "Bemowo", "piasek", new SWSpot_1.Equipment("o", "o", "o", "o", "o", "o", "o", "o", "x"), "https://www.bydgoszcz.pl/fileadmin/_processed_/3/6/csm_flisy_street_fe874f1935.jpg"), new SWSpot_1.SWSpot("Ratusz Bemowo", new SWSpot_1.Location(52.23855969507622, 20.915941942381), "Bemowo", "guma", new SWSpot_1.Equipment("o", "o", "x", "o", "o", "o", "o", "o", "o"), "https://lh5.googleusercontent.com/p/AF1QipPioz1n-INN86SUFiAu-z9cjcYaUWcAfub-Inz5=w408-h261-k-no"), new SWSpot_1.SWSpot("Park Sowińskiego", new SWSpot_1.Location(52.23855969507622, 20.915941942381), "Wola", "żwir", new SWSpot_1.Equipment("o", "o", "o", "o", "o", "o", "o", "x", "x"), "https://tvn24.pl/tvnwarszawa/najnowsze/cdn-zdjecie-xyq8lb-park-powstancow-warszawy-593352/8407d3e1-2a85-42bb-ac17-ee40e2773584.jpg")];
+exports.spots = [new SWSpot_1.SWSpot("Osiedle Leśne", new SWSpot_1.Location(52.254343, 20.933834), "Bemowo", "piasek", new SWSpot_1.Equipment("o", "o", "o", "o", "o", "o", "o", "o", "x"), "https://www.bydgoszcz.pl/fileadmin/_processed_/3/6/csm_flisy_street_fe874f1935.jpg"), new SWSpot_1.SWSpot("Ratusz Bemowo", new SWSpot_1.Location(52.23855969507622, 20.915941942381), "Bemowo", "guma", new SWSpot_1.Equipment("o", "o", "x", "o", "o", "o", "o", "o", "o"), "https://lh5.googleusercontent.com/p/AF1QipPioz1n-INN86SUFiAu-z9cjcYaUWcAfub-Inz5=w408-h261-k-no"), new SWSpot_1.SWSpot("Park Sowińskiego", new SWSpot_1.Location(52.22654479169172, 20.93761562289638), "Wola", "żwir", new SWSpot_1.Equipment("o", "o", "o", "o", "o", "o", "o", "x", "x"), "https://tvn24.pl/tvnwarszawa/najnowsze/cdn-zdjecie-xyq8lb-park-powstancow-warszawy-593352/8407d3e1-2a85-42bb-ac17-ee40e2773584.jpg")];
 },{"./SWSpot":"KRyg"}],"D87I":[function(require,module,exports) {
 "use strict";
 
@@ -267,7 +267,7 @@ exports.capitalizeFirstLetter = capitalizeFirstLetter;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.showNewMap = exports.showSpots = void 0;
+exports.showAreaMap = exports.showNewMap = exports.showSpots = void 0;
 
 var CustomMap_1 = require("./CustomMap");
 
@@ -283,11 +283,19 @@ var query = document.getElementById("query");
 var areaInput = document.getElementById("input");
 areaInput.addEventListener("change", function () {
   query.innerHTML = "";
+  var querySpots = [];
   spots_1.spots.forEach(function (spot) {
-    var querySpots = [];
-    if (spot.area === (0, CapitalizeFirstLetter_1.capitalizeFirstLetter)(areaInput.value)) querySpots.push(spot);
-    showSpots(querySpots);
+    if (spot.area === (0, CapitalizeFirstLetter_1.capitalizeFirstLetter)(areaInput.value)) {
+      querySpots.push(spot);
+    }
   });
+
+  if (querySpots.length !== 0) {
+    showAreaMap(querySpots, 13);
+    showSpots(querySpots);
+  }
+
+  querySpots = [];
   areaInput.value = "";
 });
 
@@ -306,19 +314,29 @@ showSpots(spots_1.spots);
 var spotsNames = document.querySelectorAll(".spot-name");
 spotsNames.forEach(function (spotName) {
   spotName.addEventListener("click", function () {
-    showNewMap(spotName);
+    showNewMap(spotName, 18);
   });
 });
 
-function showNewMap(spotName) {
+function showNewMap(spotName, zoom) {
   mapRoot.innerHTML = "";
   var clickedSpot = spots_1.spots.find(function (spot) {
     return spot.placeName === spotName.textContent;
   });
-  var customMap = new CustomMap_1.CustomMap("root", clickedSpot, 18);
+  var customMap = new CustomMap_1.CustomMap("root", clickedSpot, zoom);
   customMap.addMarker(clickedSpot);
 }
 
 exports.showNewMap = showNewMap;
+
+function showAreaMap(query, zoom) {
+  mapRoot.innerHTML = "";
+  var customMap = new CustomMap_1.CustomMap("root", query[0], zoom);
+  query.forEach(function (result) {
+    customMap.addMarker(result);
+  });
+}
+
+exports.showAreaMap = showAreaMap;
 },{"./CustomMap":"MtoT","./HTMLTemplate":"cXf9","./spots":"FId5","./CapitalizeFirstLetter":"D87I"}]},{},["QCba"], null)
-//# sourceMappingURL=swSpots.bd470b62.js.map
+//# sourceMappingURL=swSpots.ddf65417.js.map
