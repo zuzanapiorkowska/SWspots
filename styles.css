@@ -22,6 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     align-self: stretch;
+    justify-self: stretch;
 }
 
 #root {
@@ -37,6 +38,7 @@ body {
 h1{
     margin: 0;
     padding: 0;
+    font-size: 1rem;
 }
 
 header {
@@ -51,19 +53,17 @@ img#logo {
 }
 
 img.photo {
-    height: 12rem;
     padding: 0;
     margin: 0.5rem 0rem 0.5rem 0;
     border-radius: 0.5rem;
     border: 5px solid rgba(129, 178, 154, 0.85);
     object-fit: cover;
     width: 100%;
+    height: 14rem;
 }
 
 .photo-container {
-    width: 20rem;
-    display: flex;
-    align-items: stretch;
+   object-fit:none;
 }
 
 #heading {
@@ -84,7 +84,7 @@ img.photo {
 
 input {
     padding: 0.6rem 0.7rem;
-    margin: 0.5rem 0;
+    margin: 0.2rem 0 0.8rem;
     border-radius: 0.5rem;
     border: none;
     background-color: #F4F1DE;
@@ -105,7 +105,7 @@ input:focus{
 }
 
 tr {
-    font-size: 0.8rem;
+    font-size: 1rem;
     height: 10px;
 }
 
@@ -114,6 +114,7 @@ td.equipment{
     font-weight: bold;
     color: #333755;
     padding: 0.2rem;
+    word-wrap: none;
 }
 
 td.availability {
@@ -137,7 +138,7 @@ td.availability {
 .info-box {
     background-color: rgba(244, 241, 222, 0.3);
     margin: 0.5rem 0.5rem 0.5rem 0;
-    padding: 1rem 1rem;
+    padding: 1rem 1.5rem;
     border: none;
     border-radius: 0.5rem;
     display: flex;
@@ -152,17 +153,22 @@ td.availability {
 .spot-name {
     color:rgb(242, 204, 143);
     text-shadow: 1px 1px 1px rgb(99, 99, 99);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 0;
     margin-left: 0.3rem;
-    padding: 0;
+    padding-bottom: 1rem;
+}
+
+.spot-name:hover {
+cursor: pointer;
+color:#E07A5F;
 }
 
 .subtitle {
     display: inline-block;
     font-size: 0.9rem;
-    color: #F4F1DE;
-    text-shadow: 1px 1px 1px rgb(149, 149, 149);
+    color: #f1ecc6;
+    text-shadow: 1px 1px 1px rgb(97, 97, 97);
     margin: 0;
     padding: 0.2rem 0.3rem 0.3rem;
 }
@@ -199,7 +205,7 @@ td.availability {
 
 .label {
     color: #e07a5f;
-    font-size: 1rem;
+    font-size: 1rem !important;
 }
 
 #query {

@@ -30,6 +30,10 @@ export function createSpotInfo(spot: SWSpot):string {
                                 <td class="availability ${spot.equipment.parallelBars}">${spot.equipment.parallelBars}</td>
                             </tr>
                             <tr>
+                                <td class="equipment">niskie poręcze równoległe</td>
+                                <td class="availability ${spot.equipment.lowParallelBars}">${spot.equipment.lowParallelBars}</td>
+                            </tr>
+                            <tr>
                                 <td class="equipment">drabinka</td>
                                 <td class="availability ${spot.equipment.ladder}">${spot.equipment.ladder}</td>
                             </tr>
@@ -41,10 +45,14 @@ export function createSpotInfo(spot: SWSpot):string {
                                 <td class="equipment">pionowa rurka</td>
                                 <td class="availability ${spot.equipment.pipe}">${spot.equipment.pipe}</td>
                             </tr>
+                            <tr>
+                                <td class="equipment">koła gimnastyczne</td>
+                                <td class="availability ${spot.equipment.rings}">${spot.equipment.rings}</td>
+                            </tr>
                         </table>
                     </div>
                     <div class="info-part surface">
-                        <p class="subtitle">Nawierzchnia:</p><span class=text>${spot.surface}</span>
+                        <h3 class="subtitle">Nawierzchnia:</h3><span class=text>${spot.surface}</span>
                     </div>
                 </div>
             </div>

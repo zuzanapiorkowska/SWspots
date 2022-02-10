@@ -11,14 +11,18 @@ body {
     background-image: url("https://transparenttextures.com/patterns/asfalt-dark.png");
     padding: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-y: hidden;
 }
 
 #left-side {
     height: 100%;
     width: 100%;
     margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
+    align-self: stretch;
+    justify-self: stretch;
 }
 
 #root {
@@ -34,6 +38,7 @@ body {
 h1{
     margin: 0;
     padding: 0;
+    font-size: 1rem;
 }
 
 header {
@@ -48,14 +53,17 @@ img#logo {
 }
 
 img.photo {
-    height: 12rem;
-    width: 100%;
     padding: 0;
-    margin: 0.5rem 1.5rem 0.5rem 0;
+    margin: 0.5rem 0rem 0.5rem 0;
     border-radius: 0.5rem;
-    border: 5px solid rgba(129, 178, 154, 0.85);;
+    border: 5px solid rgba(129, 178, 154, 0.85);
     object-fit: cover;
-    justify-self: center;
+    width: 100%;
+    height: 14rem;
+}
+
+.photo-container {
+   object-fit:none;
 }
 
 #heading {
@@ -76,7 +84,7 @@ img.photo {
 
 input {
     padding: 0.6rem 0.7rem;
-    margin: 0.5rem 0;
+    margin: 0.2rem 0 0.8rem;
     border-radius: 0.5rem;
     border: none;
     background-color: #F4F1DE;
@@ -97,7 +105,7 @@ input:focus{
 }
 
 tr {
-    font-size: 0.8rem;
+    font-size: 1rem;
     height: 10px;
 }
 
@@ -106,14 +114,16 @@ td.equipment{
     font-weight: bold;
     color: #333755;
     padding: 0.2rem;
+    word-wrap: none;
 }
 
 td.availability {
     text-align: right;
-    width: 2rem;
+    width: 3rem;
     font-weight: bold;
     font-size: 1rem;
     text-shadow: 1px 1px 1px rgb(104, 104, 104);
+    padding-right: 0.2rem;
 }
 
 .x {
@@ -127,8 +137,8 @@ td.availability {
 
 .info-box {
     background-color: rgba(244, 241, 222, 0.3);
-    margin: 1rem 1.5rem 1rem 0;
-    padding: 0.5rem 1rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 1rem 1.5rem;
     border: none;
     border-radius: 0.5rem;
     display: flex;
@@ -143,26 +153,34 @@ td.availability {
 .spot-name {
     color:rgb(242, 204, 143);
     text-shadow: 1px 1px 1px rgb(99, 99, 99);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 0;
-    margin-top: 0.1rem;
     margin-left: 0.3rem;
-    padding: 0;
+    padding-bottom: 1rem;
+}
+
+.spot-name:hover {
+cursor: pointer;
+color:#E07A5F;
 }
 
 .subtitle {
+    display: inline-block;
     font-size: 0.9rem;
-    color: #F4F1DE;
-    text-shadow: 1px 1px 1px rgb(149, 149, 149);
+    color: #f1ecc6;
+    text-shadow: 1px 1px 1px rgb(97, 97, 97);
     margin: 0;
     padding: 0.2rem 0.3rem 0.3rem;
 }
 
 .text {
+    display: inline-block;
     font-weight: bold;
     color: #333755;
     font-size: 0.8rem;
-    margin-left: 1.5rem;
+    text-align: right;
+    align-self: center;
+    padding-right: 0.3rem;
 }
 
 .info-part {
@@ -170,10 +188,14 @@ td.availability {
     padding: 0.3rem;
     border: none;
     border-radius: 0.5rem;
-    width: 11.2rem;
     display: flex;
     flex-direction: column;
     align-content: center;
+}
+
+.surface {
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .right-info {
@@ -183,8 +205,29 @@ td.availability {
 
 .label {
     color: #e07a5f;
-    font-size: 1rem;
+    font-size: 1rem !important;
 }
+
+#query {
+    overflow-y: auto;
+    margin-right: 0.5rem;
+}
+
+::-webkit-scrollbar {
+    background-color: rgba(242, 204, 143, 0.4);
+    width: 1rem;
+    border-radius: 1rem;
+}
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(242, 204, 143, 0.7);
+    border-radius: 1rem; 
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(242, 204, 143, 2); 
+  }
+
 
 @media only screen and (max-width: 800px) {
 #heading {
@@ -198,4 +241,4 @@ td.availability {
     }
     }
 
-/*# sourceMappingURL=styles.71724b00.css.map */
+/*# sourceMappingURL=styles.d7b7e2da.css.map */
