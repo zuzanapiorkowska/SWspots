@@ -27,7 +27,7 @@ export class CustomMap {
         });
 
         marker.addListener("click", () => {
-            const infoWindow = new google.maps.InfoWindow({ content: objectToMark.markerContent(); })
+            const infoWindow = new google.maps.InfoWindow({ content: objectToMark.markerContent() })
 
             infoWindow.open(this.googleMap, marker)
         });
