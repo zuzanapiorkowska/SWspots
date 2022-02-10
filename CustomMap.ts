@@ -23,7 +23,7 @@ export class CustomMap {
             position: {
                 lat: objectToMark.location.lat,
                 lng: objectToMark.location.lng
-            }
+            }, 
         });
 
         marker.addListener("click", () => {

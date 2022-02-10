@@ -112,6 +112,7 @@ td.availability {
     text-align: right;
     width: 2rem;
     font-weight: bold;
+    font-size: 1rem;
     text-shadow: 1px 1px 1px rgb(104, 104, 104);
 }
 
@@ -119,8 +120,8 @@ td.availability {
     color: #E07A5F;
 }
 
-.ok {
-    color: rgb(156, 219, 60);
+.o {
+    color: rgb(24, 172, 73);
 }
 
 .info-box {

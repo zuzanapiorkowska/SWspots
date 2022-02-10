@@ -8,8 +8,8 @@ export class Location {
 export class Equipment {
     constructor(
         public bar: string,
-        public wideBar: string,
-        public highBar: string,
+        public highWideBar: string,
+        public lowBar: string,
         public parallelBars: string,
         public ladder: string,
         public horizontalLadder: string,
@@ -20,9 +20,10 @@ export class SWSpot {
     constructor(
         public placeName: string,
         public location: Location,
+        public area: string,
         public surface: string,
         public equipment: Equipment,
-        public img: string
+        public imgSrc: string
     ) { }
     markerContent(): string {
         return `<h1>${this.placeName}</h1>`;
